@@ -1,5 +1,9 @@
 # Demo purpose
 
+```
+pnpm install
+```
+
 ### Husky
 
 ```
