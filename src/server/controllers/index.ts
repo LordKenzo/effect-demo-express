@@ -2,7 +2,7 @@ import { Effect } from "effect";
 import type { Request, Response } from "express";
 import { ExpressService } from "../setup";
 
-export const BaseController = Effect.gen(function* (_) {
+export const BaseController = Effect.gen(function* () {
   const { setApp } = yield* ExpressService;
   const app = yield* setApp;
 
