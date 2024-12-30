@@ -6,6 +6,7 @@
     "start": "tsx src/index",
     "dev": "tsx src/index.ts",
     "test": "jest",
+    "test-coverage": "jest --coverage",
     "prepare": "husky"
   },
   "keywords": [],
