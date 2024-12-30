@@ -1,13 +1,13 @@
-import cookieParser from "cookie-parser";
-import { Context, Effect, Layer, Either } from "effect";
-import express from "express";
-import type { Express } from "express";
-import { getConfig } from "../utility/getConfig";
+import cookieParser from 'cookie-parser';
+import { Context, Effect, Layer, Either } from 'effect';
+import express from 'express';
+import type { Express } from 'express';
+import { getConfig } from '../utility/getConfig';
 
 interface ExpressServiceImpl {
   readonly setApp: Effect.Effect<Express, never>;
 }
-export class ExpressService extends Context.Tag("ExpressService")<
+export class ExpressService extends Context.Tag('ExpressService')<
   ExpressService,
   ExpressServiceImpl
 >() {
