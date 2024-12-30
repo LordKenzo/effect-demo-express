@@ -1,11 +1,10 @@
 import { Effect, Exit } from "effect";
 import { getConfig } from "../getConfig";
 
-// Mock delle variabili d'ambiente
-process.env["PORT"] = "3000";
-process.env["server_url"] = "http://localhost:3000";
-
 describe("getConfig", () => {
+  // Mock delle variabili d'ambiente
+  process.env["PORT"] = "3000";
+  process.env["server_url"] = "http://localhost:3000";
   const originalEnv = { ...process.env };
   beforeEach(() => {
     // Salva valore originale
