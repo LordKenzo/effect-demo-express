@@ -5,7 +5,8 @@
   "scripts": {
     "start": "tsx src/index",
     "dev": "tsx src/index.ts",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
