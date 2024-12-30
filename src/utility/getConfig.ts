@@ -1,5 +1,5 @@
-import { Effect, Config, Either } from "effect";
-import type { ConfigError } from "effect/ConfigError";
+import { Effect, Config, Either } from 'effect';
+import type { ConfigError } from 'effect/ConfigError';
 
 interface ConfigObject {
   port: number;
@@ -7,9 +7,9 @@ interface ConfigObject {
 }
 
 const program = Effect.gen(function* () {
-  const port = yield* Config.number("PORT").pipe(Config.withDefault(8080));
-  const server_url = yield* Config.string("server_url").pipe(
-    Config.withDefault("http://localhost")
+  const port = yield* Config.number('PORT').pipe(Config.withDefault(8080));
+  const server_url = yield* Config.string('server_url').pipe(
+    Config.withDefault('http://localhost')
   );
   return {
     port,

@@ -1,6 +1,6 @@
 import { Effect, Layer } from "effect";
-import { ExpressService, ServerLive } from "./server/setup";
-import { BaseController } from "./server/controllers";
+import { ExpressService, ServerLive } from './server/setup';
+import { BaseController } from './server/controllers';
 
 const main = () => {
   // setAppLive: Uno strato sincrono che fornisce l'istanza live del servizio Express.
@@ -25,7 +25,7 @@ const main = () => {
   Effect.runFork(Layer.launch(program)).pipe(
     Effect.catchAll((error) =>
       Effect.sync(() => {
-        console.error("Failed to start the application:", error);
+        console.error('Failed to start the application:', error);
         process.exit(1);
       })
     )
