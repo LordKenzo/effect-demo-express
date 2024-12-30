@@ -6,15 +6,15 @@ process.env["PORT"] = "3000";
 process.env["server_url"] = "http://localhost:3000";
 
 describe("getConfig", () => {
-  let originalPort = process.env["PORT"];
+  const originalEnv = { ...process.env };
   beforeEach(() => {
     // Salva valore originale
-    originalPort = process.env["PORT"];
+    process.env = { ...originalEnv };
   });
 
   afterEach(() => {
     // Ripristina valore originale
-    process.env["PORT"] = originalPort;
+    process.env = { ...originalEnv };
   });
   it("should return the correct configuration", async () => {
     const result = await Effect.runPromise(getConfig());
